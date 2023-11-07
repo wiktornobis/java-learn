@@ -35,14 +35,14 @@ public class Garnek {
         wylaczGarnek();
     }
 
-    public void wlaczGarnek() {
+    private void wlaczGarnek() {
         System.out.println("Właczanie garnka");
     }
 
-    public void gotujPrzezPolGodzinny() {
+    private void gotujPrzezPolGodzinny() {
         System.out.println("Gotowanie przez 30 minut");
     }
-    public void wylaczGarnek() {
+    private void wylaczGarnek() {
         System.out.println("Wylaczanie garnka");
     }
 }
