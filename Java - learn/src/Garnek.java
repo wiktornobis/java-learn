@@ -1,16 +1,48 @@
 public class Garnek {
-    final int srednica;
-    final int wysokosc;
+    int srednica;
+    int wysokosc;
     String kolor;
 
 
-    public Garnek(int srednica, int wysokosc) {
-        this.srednica = srednica;
-        this.wysokosc = wysokosc;
-    }
+
     public Garnek(int srednica, int wysokosc, String kolor) {
         this.srednica = srednica;
         this.wysokosc = wysokosc;
         this.kolor = kolor;
+    }
+
+    //metoda - o nazwie gotuj
+
+    public String gotuj() {
+        return "Gotowanie w trakcie";
+    }
+
+    public String gotuj(boolean czyDodalismySol) {
+        if (czyDodalismySol) {
+            return "Gotowanie z solą";
+        } else {
+            return "Gotowanie bez soli";
+        }
+    }
+
+    public int zwrocTemperatureWody () {
+        return 100;
+    }
+
+    public void gotujBezInformacji () {
+        wlaczGarnek();
+        gotujPrzezPolGodzinny();
+        wylaczGarnek();
+    }
+
+    public void wlaczGarnek() {
+        System.out.println("Właczanie garnka");
+    }
+
+    public void gotujPrzezPolGodzinny() {
+        System.out.println("Gotowanie przez 30 minut");
+    }
+    public void wylaczGarnek() {
+        System.out.println("Wylaczanie garnka");
     }
 }

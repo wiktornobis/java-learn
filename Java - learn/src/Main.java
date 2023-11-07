@@ -1,12 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
+        Garnek garnek = new Garnek(17, 15, "czerwony");
 
-        Garnek garnek = new Garnek(17, 15);
-        garnek.kolor = "czerwony";
-        
-        System.out.println(garnek.srednica);
-        System.out.println(garnek.wysokosc);
-        System.out.println(garnek.kolor);
+        String wiadomosc = garnek.gotuj();
+        System.out.println(wiadomosc);
+
+        String wiadomość2 = garnek.gotuj(false);
+        System.out.println(wiadomość2);
+
+        int temperatura = garnek.zwrocTemperatureWody();
+        System.out.println(temperatura);
+
+        garnek.gotujBezInformacji();
+
     }
 }
