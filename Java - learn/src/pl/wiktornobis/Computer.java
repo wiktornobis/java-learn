@@ -1,16 +1,21 @@
 package pl.wiktornobis;
 
+import pl.wiktornobis.drive.Drive;
+import usbdevice.USBDevice;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Computer {
     private Monitor monitor;
+    private Drive drive;
     private HeadPhones headPhones;
 
     List<USBDevice> usbDevices = new ArrayList<>();
 
-    public Computer(Monitor monitor) {
+    public Computer(Monitor monitor, Drive drive) {
         this.monitor = monitor;
+        this.drive = drive;
     }
 
     public Monitor getMonitor() {
