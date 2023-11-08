@@ -1,13 +1,13 @@
 package pl.wiktornobis;
 
-public class HeadPhones {
+public class File {
     private final String name;
-
-    public HeadPhones(String name) {
-        this.name = name;
-    }
 
     public String getName() {
         return name;
+    }
+
+    public File(String name) {
+        this.name = name;
     }
 }
