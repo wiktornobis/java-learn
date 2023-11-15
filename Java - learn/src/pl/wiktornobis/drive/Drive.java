@@ -1,6 +1,6 @@
 package pl.wiktornobis.drive;
 
-import pl.wiktornobis.File;
+import pl.wiktornobis.file.File;
 
 public interface Drive {
     void addFile(File file);

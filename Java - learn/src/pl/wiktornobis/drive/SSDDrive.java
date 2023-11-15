@@ -1,6 +1,6 @@
 package pl.wiktornobis.drive;
 
-import pl.wiktornobis.File;
+import pl.wiktornobis.file.File;
 
 import java.util.Collection;
 import java.util.HashMap;
