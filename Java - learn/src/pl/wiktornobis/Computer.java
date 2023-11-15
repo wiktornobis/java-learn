@@ -11,7 +11,7 @@ public class Computer {
     private Drive drive;
     private HeadPhones headPhones;
 
-    List<USBDevice> usbDevices = new ArrayList<>();
+    private List<USBDevice> usbDevices = new ArrayList<>();
 
     public Computer(Monitor monitor, Drive drive) {
         this.monitor = monitor;
@@ -36,5 +36,20 @@ public class Computer {
 
     public List<USBDevice> getUsbDevices() {
         return usbDevices;
+    }
+
+    public void addUSBDevice(USBDevice usbDevice) {
+        boolean isConnected = usbDevice.connect();
+
+        if(isConnected) {
+            usbDevices.add(usbDevice);
+        }
+    }
+    public void removeUSBDevice(USBDevice usbDevice) {
+        boolean isDisconnected = usbDevice.disconnect();
+
+        if(isDisconnected) {
+            usbDevices.remove(usbDevice);
+        }
     }
 }
